@@ -4,14 +4,14 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons/faLeaf";
 
-export default function Crop(props, { navigation }) {
+export default function Rice({ handleChange }) {
   const [press, setPress] = useState(false);
   return (
-    <View style={CropBoxStyle.button}>
+    <View style={RiceBoxStyle.button}>
       <Pressable
         onPress={() => {
           setPress(!press);
-          navigation.navigate("Rice");
+          handleChange("Rice");
         }}
         style={({ pressed }) => [
           {
@@ -22,15 +22,15 @@ export default function Crop(props, { navigation }) {
             padding: "5px",
           },
         ]}>
-        <Text style={CropBoxStyle.leafIcon}>
-          {props.name} {<FontAwesomeIcon icon={faLeaf} />}
+        <Text style={RiceBoxStyle.leafIcon}>
+          Rice {<FontAwesomeIcon icon={faLeaf} />}
         </Text>
       </Pressable>
     </View>
   );
 }
 
-const CropBoxStyle = StyleSheet.create({
+const RiceBoxStyle = StyleSheet.create({
   button: {
     margin: 10,
     width: 80,

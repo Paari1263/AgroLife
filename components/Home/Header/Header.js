@@ -1,6 +1,6 @@
 import { Text, View, Image } from "react-native";
 import { StyleSheet } from "react-native";
-import Notify from "./Profile";
+import Profile from "./Profile";
 
 export default function Header() {
   const currentHour = new Date().getHours();
@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <View style={HeaderStyle.topBar}>
       <Text style={HeaderStyle.greetingText}>{greeting}</Text>
-      <Notify />
+      <Profile />
     </View>
   );
 }

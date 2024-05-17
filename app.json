@@ -30,6 +30,12 @@
         {
           "fonts": ["./assets/fonts/WorkSans-VariableFont_wght.ttf"]
         }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app wants to access your photos."
+        }
       ]
     ]
   }
